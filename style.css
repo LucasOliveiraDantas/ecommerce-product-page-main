@@ -137,13 +137,30 @@ ul{
     display: flex;
     align-items: end;
     column-gap: 22px;
+
 }
 
 #btn-cart{
     display: flex;
     width: 22px;
     height: 20px;
+    position: relative;
+
+}
+.notify-cart{
+    position: absolute;
+    width: 19px;
+    height: 13px;
+    top: -5px;
+    left: 8px;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 5px;
+    text-align: center;
     
+}
+.desc-notify-cart{
+    font-size: 10px;
+    color: hsl(25, 100%, 94%);
 }
 
 #btn-cart img{

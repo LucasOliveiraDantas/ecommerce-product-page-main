@@ -102,15 +102,53 @@ let btnAddItemPlus = document.getElementById("btn-number-plus")
 let btnAddItemMinus = document.getElementById("btn-number-minus")
 let counterNumberItem = document.querySelector(".value-item-product")
 
+let itemCount = 0
 
 btnAddItemMinus.addEventListener("click", ()=>{
   counterNumberItem.textContent --
+  itemCount --
   if(counterNumberItem.textContent <= 0){
     counterNumberItem.textContent = 0
+    itemCount = 0
   }
   
 })
 btnAddItemPlus.addEventListener("click", ()=>{
   counterNumberItem.textContent ++
-  
+  itemCount ++
+})
+//######################################################//
+/*
+let descNotifyCart = document.querySelector(".desc-notify-cart")
+
+
+
+if (descNotifyCart.textContent == 0){
+  document.querySelector(".content-item-cart").style.display = "none"
+  document.querySelector(".info-item-product").style.display = "block"
+}if(descNotifyCart.textContent > 0){
+  document.querySelector(".content-item-cart").style.display = "block"
+  document.querySelector(".info-item-product").style.display = "none"
+}
+*/
+
+//######################################################//
+
+
+let btnAddItemCart = document.getElementById("btn-add-item-cart")
+let valuePriceProduct = document.querySelector(".price-value-product span").textContent
+
+let valuePriceCart = document.querySelector(".value-price-cart")
+let countItemproduct = document.querySelector(".count-item-product")
+
+
+  btnAddItemCart.addEventListener("click", () => {
+  valuePriceCart.textContent = valuePriceProduct
+  countItemproduct.textContent = itemCount
+
+  let valueCartTotal = valuePriceCart.textContent * countItemproduct.textContent
+  valueCartTotal = valueCartTotal.toFixed(2)
+  console.log(valueCartTotal)
+  document.querySelector(".value-price-total span").textContent = valueCartTotal
+
 })

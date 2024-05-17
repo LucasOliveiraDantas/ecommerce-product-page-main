@@ -67,26 +67,29 @@
             <p class="info-item-product">
               Your cart is empty. 
             </p>
-            <div class="info-product-cart">
-              <img class="img-product-cart" src="images/image-product-1.jpg" alt="image product cart">
-              <div class="info-price-product-cart">
-                <p class="name-product-cart">
-                  Fall Limited Edition Sneakers
-                </p>
-                <div class="price-cart">
-                  <p class="desc-price-cart">
-                    $<span class="value-price-cart">125.00</span> x <span class="count-item-product">3</span>
+            <div class="content-item-cart">
+              <div class="info-product-cart" >
+                <img class="img-product-cart" src="images/image-product-1.jpg" alt="image product cart">
+                <div class="info-price-product-cart">
+                  <p class="name-product-cart">
+                    Fall Limited Edition Sneakers
                   </p>
-                  <p class="value-price-total">$<span>350.00</span></p>
+                  <div class="price-cart">
+                    <p class="desc-price-cart">
+                      $<span class="value-price-cart">125.00</span> x <span class="count-item-product">3</span>
+                    </p>
+                    <p class="value-price-total">$<span>350.00</span></p>
+                  </div>
                 </div>
+                <button id="btn-delete-cart">
+                  <img src="images/icon-delete.svg" alt="icon delete" class="icon-delete-cart">
+                </button>
               </div>
-              <button id="btn-delete-cart">
-                <img src="images/icon-delete.svg" alt="icon delete" class="icon-delete-cart">
+              <button id="btn-checkout-cart">
+                Checkout
               </button>
             </div>
-            <button id="btn-checkout-cart">
-              Checkout
-            </button>
+           
           </div>
           
 
@@ -94,11 +97,17 @@
       </nav>
       <div class="user">
         <button id="btn-cart">
+          <div class="notify-cart">
+            <p class="desc-notify-cart">
+              0
+            </p>
+          </div>
           <img src="images/icon-cart.svg" alt="icon cart" id="icon-cart">
         </button>
         <button id="btn-perfil">
           <img src="images/image-avatar.png" alt="image perfil" class="img-perfil">
         </button>
+        
       </div>
     </header>
 
